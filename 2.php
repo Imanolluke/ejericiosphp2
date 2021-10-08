@@ -10,13 +10,13 @@ class Tabla {
     private $columnas;
 
 
-    function __construct(){
+    function __construct($filas, $columnas){
      
-    }
-
-    function crearTabla($filas, $columnas){
         $this->filas = $filas;
         $this->columnas = $columnas;
+    }
+    function crearTabla($filas, $columnas){
+
 
         echo "<table>";
         for($i=1; $i < $filas;$i++){
@@ -30,9 +30,12 @@ class Tabla {
         }
         echo "</tr>";
     }   
+
 }
-$tabla = new Tabla();
+$tabla = new Tabla(3,3);
 echo $tabla->crearTabla(3,3);
+
+
 
 
 
